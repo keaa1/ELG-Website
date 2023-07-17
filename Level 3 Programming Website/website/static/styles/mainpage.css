@@ -1,0 +1,102 @@
+/* General Formatting */  
+
+h1 {
+    text-align: center;
+    font-size: 325%;
+    padding: 5px;
+    padding-top: 35px;
+    text-decoration: none;
+    word-spacing: 100%;
+    font-family: serif;
+} 
+ 
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+} 
+
+    /* Home */ 
+
+/* Background Video */ 
+
+
+/* Header */
+/* CODE NOT WORKING. WHAT IS WRONG??????? */
+.main-header {
+    width: 100%;
+    border: solid;
+    background-color: white;
+}
+
+/* The links under the header */  
+.header-hyperlinks {
+    text-align: center;
+    color: black;
+    font-size: 175%;
+    padding: 0%;
+    text-decoration: none;
+    word-spacing: 100%;
+    position: relative;
+    top: -15px;
+    font-family: serif !important;
+}
+
+.header-hyperlinks small {
+    font-size: 100%;
+}
+
+.slideshow {
+    height: 600px;
+    display: block;
+}
+
+/* Team Game Logos */  
+
+.logos {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+    /* Best Sellers */
+    
+.best-sellers button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+/* For debugging */
+.containers {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 2px;
+} 
+
+
+/* Merch */ 
+.extralife {
+    align-self: center;
+}
+
+/* About us */ 
+
+.aboutus-image {
+    width: 500px;
+    height: auto;
+}
