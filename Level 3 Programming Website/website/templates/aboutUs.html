@@ -1,13 +1,82 @@
 {% extends "base.html" %} {% block title %}About Us{% endblock %} {% block content %}
-<!DOCTYPE html>
-<html>
-    <h1 class="titles"> A team on the forefront of imagination</h1>
-    <div class="containers row">
-        <div class="col">
-            <p> 100+ members 7 world titles 100M views on youtube </p>
-        </div>
-        <div class="col">
-            <img class="aboutus-image" src="{{url_for('static', filename='elg_logo_transparent.jpeg')}}">
-        </div>
-</html>
+<head>
+  <style>
+    body {
+        background-image: url(/static/blurred-abstract-green-yellow.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid mt-4">
+      <div class="row">
+          <div class="col-sm-3 bg-success">
+              <!-- Left Column with Logos -->
+              <div class="row testicles">
+                  <div class="col-12 mb-3">
+                      <img class="team-logos" src="{{url_for('static', filename='TM_BLACK_TITLE2.png')}}" onmouseover="changeCenterContent('Trackmania', 'Keesta is a carry, #1 in Oceania, worlds next year baby ELG on top.');" onmouseout="restoreInitialContent()">
+                  </div>
+                  <div class="col-12 mb-3">
+                      <img class="team-logos" src="{{url_for('static', filename='BTD6Logo.png')}}" onmouseover="changeCenterContent('BTD6', 'First (and only) professional Esports BTD6 team, this team has no competition and is hands down the best.');" onmouseout="restoreInitialContent()">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <img class="team-logos" src="{{url_for('static', filename='Dota-2-logo.png')}}" onmouseover="changeCenterContent('Dota 2', 'Dota 2 is LoL for real gamers.');" onmouseout="restoreInitialContent()">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <img class="team-logos" src="{{url_for('static', filename='Rocket-League-logo.png')}}" onmouseover="changeCenterContent('Rocket League', 'After ELG sniped CAMJAMG the Rocket League scene has never been the same, ELG claimed there first world title in 1999 and looks to go for round two in 2023.');" onmouseout="restoreInitialContent()">
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-sm-6 bg-warning" id="centerColumn">
+            <!-- Central Column with Text and Larger Image -->
+            <div id="initialCenterContent">
+                <h1>Meet Our Teams</h1>
+                <div>
+                    <img src="{{url_for('static', filename='elg_logo_transparent.png')}}" class="imageCenter" id="centerImage"> 
+                </div>
+            </div>
+          </div>
+        
+
+          <div class="col-sm-3 bg-success">
+              <!-- Right Column with Logos -->
+              <div class="row testicles">
+                  <div class="col-12 mb-3">
+                      <img class="team-logos" src="{{url_for('static', filename='Hearthstone-Logo.png')}}" onmouseover="changeCenterContent('Hearthstone', 'Our Hearthstone team is epic and cool!');" onmouseout="restoreInitialContent()">
+                  </div>
+                  <div class="col-12 mb-3">
+                      <img class="team-logos" src="{{url_for('static', filename='Stardew_logo.png')}}" onmouseover="changeCenterContent('Stardew', 'We just hired BlaDeSDV its joever dude.');" onmouseout="restoreInitialContent()">
+                  </div>
+                  <div class="col-12 mb-3">
+                      <img class="team-logos" src="{{url_for('static', filename='Hollowknight_logo.png')}}" onmouseover="changeCenterContent('Hollowknight', 'Qu1gley is team carry, actually the GOAT best Hollowknight player alive, and Juggy is good too I guess.');" onmouseout="restoreInitialContent()">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <img class="team-logos" src="{{url_for('static', filename='CSGO_logo.png')}}" onmouseover="changeCenterContent('CSGO', 'I know nothing about CSGO but I know we are better than Team Liquid.');" onmouseout="restoreInitialContent()">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    // Store the initial content
+    var initialCenterContent = document.getElementById('initialCenterContent').innerHTML;
+
+    function changeCenterContent(title, text) {
+        var centerImage = document.getElementById('centerImage');
+        centerImage.src = text;
+
+        var centerColumn = document.getElementById('centerColumn');
+        centerColumn.innerHTML = '<h1>' + title + '</h1>' + '<h5>' + text + '</h5>';
+    }
+
+    function restoreInitialContent() {
+        var centerColumn = document.getElementById('centerColumn');
+        centerColumn.innerHTML = initialCenterContent;
+    }
+</script>
+
+</body>
 {% endblock %}

@@ -2,36 +2,41 @@
 <!DOCTYPE html>
 <!-- ------------- Removes General Navbar ------------- -->
 {% block navbar %}{% endblock %}
+
 <!-- ------------- Custom homepage navbar ------------- -->
 <html>  
-  <head class="main-header">     
-      <h1>ELG OFFICIAL</h1>
-      <div class="header-hyperlinks">
-          <a href="/aboutUs">ABOUT</a>
-          <small>|</small>
-          <a href="/community">COMMUNITY</a>
-          <small>|</small>
-          <a href="/news">NEWS</a>
-          <small>|</small>
-          <a href="/merch">MERCH</a> 
-      </div>
-  </head>
-  <body>
+  <head class="main-header"> 
+    <h1>ELG OFFICIAL</h1>
+    <div class="header-hyperlinks">
+        <a href="/aboutUs">ABOUT</a>
+        <small>|</small>
+        <a href="/community">COMMUNITY</a>
+        <small>|</small>
+        <a href="/news">NEWS</a>
+        <small>|</small>
+        <a href="/merch">MERCH</a> 
+    </div>
+</head>
+<body>
 
+<!-- ------------- BIG OL' PHOTO OF OUR LOGO ------------- -->
+  <div class="front-logo">
+    <div class="containers">
+      <img src="{{url_for('static', filename='elg_logo_transparent.png')}}">
+    </div>
+  </div>
+  
+<!-- ------------- IMAGE/VIDEO OF OUR ORGANISATION ------------- -->
+    <style>
+      body {
+          background-image: url(/static/blurred-abstract-green-yellow.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+   </style>
 
-    <!-- ------------- IMAGE/VIDEO OF OUR ORGANISATION ------------- -->
-
-
-    <!-- ----------- CAROUSEL ------------- -->
+<!-- ----------- CAROUSEL ------------- -->
     <div>
-      <style>
-        body {
-           background-image: url(/static/blurred-abstract-green-yellow.png);
-           background-repeat: no-repeat;
-           background-size: cover;
-
-        }
-     </style>
       <div id="carouselExampleSlidesOnly" class="containers" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -47,7 +52,7 @@
       </div>
     </div>
 
-    <!-- --------------- PAGE DISPLAYING OUR TEAMS ---------------->
+  <!-- --------------- PAGE DISPLAYING OUR TEAMS ---------------->
 
     <div class="containers">
           
@@ -64,20 +69,18 @@
           <h1><a href="/aboutUs"><button class="btn btn-dark">Learn More</button></a></h1>
     </div>
 
-        <!-- ------------- "Best Sellers" ------------- -->
+   <!-- ------------- "Best Sellers" ------------- -->
 
     <div class="containers">
       <div class="best-sellers">
           <h1>
               BEST SELLERS
           </h1>
-          Kea sucks penis
-          <br> <br> <br> <br>
           <h1><a href="/merch"><button class="btn btn-dark">SHOP MORE</button></a></h1>
       </div>
     </div>
 
-    <!-- ------------- "Contact Us" ------------- -->
+  <!-- ------------- "Contact Us" ------------- -->
     <h1>Contact Us</h1>
     <div class="containers">
       <div class="row">
@@ -119,13 +122,7 @@
   </body>
 </html>
 
-
-
-
-
-
-    <!-- ADD A FOOTER NEXT AND MAKE IT UNDER AN ... INDEX?
+<!-- ADD A FOOTER NEXT AND MAKE IT UNDER AN ... INDEX?
          SO THAT YOU DON'T HAVE TO KEEP PASTING THE HEADER CODE FOR EVERY PAGE -->
 
-    <!-- ------------- LINE BREAK ------------- -->
 {% endblock %}

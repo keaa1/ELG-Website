@@ -1,8 +1,40 @@
-{% extends "base.html" %} {% block title %}Community{% endblock %} {% block content %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <p> Community </p>
-    </head>
-</html>
-{% endblock %}
+{% extends "base.html" %} {% block title %}Community{% endblock %} {% block content%}
+<!--head>
+    <style>
+        body {
+            background-image: url(/static/blurred-abstract-green-yellow.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+     </style>
+</head>
+<body>
+    <h1 align="Left">Post to the ELG Community!</h1>
+    <ul class="list-group list-group-flush" id="content">
+      <div class="form-group">
+        <input
+          type="title"
+          class="form-control"
+          id="title"
+          name="title"
+          placeholder="Enter an interesting title"
+        />
+      </div>
+      {% for content in user.content %}
+      <li class="list-group-item">
+        {{ content.data }}
+        <button type="button" class="close" onClick="deleteNote({{ content.id }})">
+         <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+    <form method="POST">
+      <textarea name="content" id="content" class="form-control"></textarea>
+      <br />
+      <div align="center">
+        <button type="submit" class="btn btn-primary">Post</button>
+      </div>
+    </form>
+</body-->
+    {% endblock %}
